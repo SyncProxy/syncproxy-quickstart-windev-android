@@ -34,9 +34,10 @@ public static void StartSyncClient()
 ````java  
 StartSyncClient()
 ````  
-Compile and launch your app: the Sync button should now appear on top of the main activity of your application:  
+Compile and launch your app: the Sync button should now appear on top of the main window of your application:  
 
   ![sync button](https://raw.githubusercontent.com/syncproxy/syncproxy-quickstart-android/master/sync-icon.png)
+
 and when sync is launched, the login prompt should popup:  
   ![login prompt](https://raw.githubusercontent.com/syncproxy/syncproxy-quickstart-android/master/login-prompt.png)
   
@@ -73,7 +74,7 @@ Since you will certainly start testing your WinDev Mobile app for Android inside
 ## Database schema management  
 
 The **SyncProxy** sync client will create the embedded database for you !  You won't need to worry about the tedious schema management (create tables, created columns, etc.). Every upgrade made to your backend database will apply to the embedded database during the synchronization.
->All you have to do is adapt the analysis and the schema of your WinDev Mobile application to stay in tune with database structures.
+>All you have to do is adapt the analysis and the schema of your WinDev Mobile application to stay in tune with the database structures.
   
 ## Notes
 
