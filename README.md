@@ -72,7 +72,7 @@ If each window requires different updates, you can create several global procedu
 
 ## How to check synched data  
 
-Since you will certainly start testing your WinDev Mobile app for Android inside an Android Emulator, good chances are that you have already installed AndroidStudio. If so, you can explore and debug your WinDev generated Android app and its database, using regular Android Studio tools, as described in the [SyncProxy quick start guide for Android](https://github.com/SyncProxy/syncproxy-quickstart-android).
+Since you certainly started testing your WinDev Mobile app for Android inside an Android Emulator, good chances are that you have already installed AndroidStudio. If so, you can explore and debug your WinDev generated Android app and its database, using regular Android Studio tools, as described in the [SyncProxy quick start guide for Android](https://github.com/SyncProxy/syncproxy-quickstart-android).
 
 ## Database schema management  
 
