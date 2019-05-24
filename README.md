@@ -54,9 +54,8 @@ public static void ShowSyncButton()
 ```` 
 ## How to trigger an update of the display after sync
 If your app needs updating its display after data have been modified, this can be done simply by passing an *onSyncEnd()* handler (java Runnable) to the SyncClient library's *showSyncButton()* function.
->Since we're coding within a **java** global procedure, the names of your app's objects (project, windows, controls...) used in *onSyncEnd()* handler are the names **created by the WinDev java generator** (see */Android/Compile/\*.java* files) 
 
-Example:
+**Example:**
 ```
 	Runnable onSyncEnd = new Runnable(){public void run(){
 	  GWDPMyProject.ms_Project.mWD_MyWindow.fWD_refreshMyWindow();
@@ -64,6 +63,10 @@ Example:
 	SyncClient.startObservation(getCurrentActivity(), "{'proxyId':'<your proxy Id>', 'connectorType':'SQLite', 'dbName':'<local db name>'}" )
 	.showSyncButton(getCurrentActivity(), onSyncEnd);
 ```
+in the above example, the local (WLanguage) procedure *refreshMyWindow()* of MyWindow is called after each successful synchronization.
+>Since we're coding within a **java** global procedure, the names of your app's objects (project, windows, controls...) used in *onSyncEnd()* handler are the names **created by the WinDev java generator** (see */Android/Compile/\*.java* files).
+
+
 ## How to trigger different updates for each window after sync
 If each window requires different updates, you can create several global procedures such as *ShowSyncButtonWin1()*, *ShowSyncButtonWin2()*, each of which using a different *onSyncEndWin1()*, *onSyncEndWin2()* onSyncEnd handlers.
 
