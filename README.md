@@ -54,7 +54,7 @@ public static void ShowSyncButton()
 ```` 
 ## How to trigger an update of the display after sync
 If your app needs updating its display after data have been modified, this can be done simply by passing an *onSyncEnd()* handler (java Runnable) to the SyncClient library's *showSyncButton()* function.
->Since we're coding withing a **java** global procedure, the names of your app's objects (project, windows, controls...) used in *onSyncEnd()* handler are the names **created by the WinDev java generator** (see */Android/Compile/\*.java* files) 
+>Since we're coding within a **java** global procedure, the names of your app's objects (project, windows, controls...) used in *onSyncEnd()* handler are the names **created by the WinDev java generator** (see */Android/Compile/\*.java* files) 
 
 Example:
 ```
