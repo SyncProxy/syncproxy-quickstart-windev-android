@@ -54,12 +54,12 @@ public static void ShowSyncButton()
 ```` 
 ## How to trigger an update of the display after sync
 If your app needs updating its display after data have been modified, this can be done simply by passing an *onSyncEnd()* handler (java Runnable) to the SyncClient library's *showSyncButton()* function.
->Since we're coding withing java global procedures, variables names (project, windows, controls...) are the names given by the WinDev java generator into the file */Android/Compile/\*.java* files.
+>Since we're coding withing a **java** global procedure, the names of your app's objects (project, windows, controls...) used in *onSyncEnd()* handler are the names **created by the WinDev java generator** (see */Android/Compile/\*.java* files) 
 
 Example:
 ```
 	Runnable onSyncEnd = new Runnable(){public void run(){
-		GWDPMyProject.ms_Project.mWD_MyWindow.fWD_refreshMyWindow();
+	  GWDPMyProject.ms_Project.mWD_MyWindow.fWD_refreshMyWindow();
 	}};
 	SyncClient.startObservation(getCurrentActivity(), "{'proxyId':'<your proxy Id>', 'connectorType':'SQLite', 'dbName':'<local db name>'}" )
 	.showSyncButton(getCurrentActivity(), onSyncEnd);
