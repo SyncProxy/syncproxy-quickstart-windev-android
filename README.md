@@ -44,7 +44,7 @@ and when sync is launched, the login prompt should popup:
 You are now ready to sync !  Any changes made to your embedded database are sent in realtime to your backend database and *vice-versa*. When offline, all changes made are marked temporarily, and synched when going back online, bidirectionnally.  
 
 ## How to display sync button on other windows
-If you want to display the sync button in other windows of your application, simply create the following global procedure and call it from the *End of initialization* handler of each window:  
+If you want to display the sync button in other windows of your application, simply create the following java global procedure and call it from the *End of initialization* handler of each window:  
 ````java  
 import com.syncproxy.syncclient.SyncClient;
 public static void ShowSyncButton()
