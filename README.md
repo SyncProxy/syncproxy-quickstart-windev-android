@@ -1,15 +1,15 @@
 # SyncProxy quick start guide for WinDev Mobile for Android  
 
-This quick start tutorial will show you to how to setup a Windev Mobile application for Android embedding its own database together with **SyncProxy** client. Used with online **SyncProxy** server (www.syncproxy.com), this is the quickest way to create applications that will synchronize bidirectionally, reactively in realtime with your backend database (MySQL, SQL Server, MongoDB...), and also work perfectly when offline.   
+This quick start tutorial will show you to how to setup a Windev Mobile application for Android embedding its own database together with **SyncProxy** client. Used with online **SyncProxy** server (https://www.syncproxy.com), this is the quickest way to create applications that will synchronize bidirectionally, reactively in realtime with your backend database (MySQL, SQL Server, MongoDB...), and also work perfectly when offline.   
   
 
 ## Architecture  
 
-The **SyncProxy** client targets WinDev Mobile applications for Android with an embedded SQLite database that provides offline capabilities. By adding the **SyncProxy** client to your WinDev Mobile application, you will turn your offline app into a powerfull online application with bidirectionnal reactive (realtime) sync that will work perfectly with or without connection. You will not need develop any specialized webservices, since the **SyncProxy** server enables to define sync profiles directly online on www.syncproxy.com which acts as a gateway between your app and your backend database.
+The **SyncProxy** client targets WinDev Mobile applications for Android with an embedded SQLite database that provides offline capabilities. By adding the **SyncProxy** client to your WinDev Mobile application, you will turn your offline app into a powerfull online application with bidirectionnal reactive (realtime) sync that will work perfectly with or without connection. You will not need develop any specialized webservices, since the **SyncProxy** server enables to define sync profiles directly online on https://www.syncproxy.com which acts as a gateway between your app and your backend database.
 
 ## Before starting  
 
-Go to www.syncproxy.com, register and log-in as a proxy administrator (it's free !), then create and configure your proxy to synchronize with your backend database.  
+Go to https://www.syncproxy.com, register and log-in as a proxy administrator (it's free !), then create and configure your proxy to synchronize with your backend database.  
   
 
 ## How to upgrade an existing WinDev Mobile Android application for SyncProxy reactive sync  
@@ -27,7 +27,7 @@ public static void StartSyncClient()
 	SyncClient.startObservation(getCurrentActivity(), "{'proxyId':'<your proxy Id>', 'connectorType':'SQLite', 'dbName':'<local db name>'}" ).showSyncButton(getCurrentActivity());
 }
   ```  
->Replace *dbName* attribute with the name of the local database . You get your *proxyId* on my.syncproxy.com after creating the sync proxy.
+>Replace *dbName* attribute with the name of the local database . You get your *proxyId* on https://my.syncproxy.com after creating the sync proxy.
 
  4. In the code of your main window, simply call the StartSyncClient() function from the *End of initialization* handler.
 
@@ -86,4 +86,4 @@ The **SyncProxy** sync client will create the embedded database for you !  You w
 - Also you may need to configure the minimal version of Android to 7.0 (10th page of Android app generation options) to 
 ## Link  
 
-To access **SyncProxy** administration to setup your sync proxy and connect to your backend database, go to www.syncproxy.com  
+To access **SyncProxy** administration to setup your sync proxy and connect to your backend database, go to https://www.syncproxy.com  
